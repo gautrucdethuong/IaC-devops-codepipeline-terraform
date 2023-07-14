@@ -1,13 +1,16 @@
 # Create AWS CodePipeline with Multiple Environments Dev and Staging
-
+Define infratructure
 ![image](https://github.com/gautrucdethuong/IaC-devops-codepipeline-terraform/assets/57904796/71ce21ee-e7ef-493e-8df2-01f8dbebf2dd)
 
-
+Infratructure Development
 ![image](https://github.com/gautrucdethuong/IaC-devops-codepipeline-terraform/assets/57904796/26bfb5a0-7269-44e6-944a-20c91af85fdc)
 
+Infratructure Stagging
 ![image](https://github.com/gautrucdethuong/IaC-devops-codepipeline-terraform/assets/57904796/0ad1d3cb-8944-4a09-b10c-949359191327)
 
-![Uploading image.png…]()
+Pipeline CICD
+![image](https://github.com/gautrucdethuong/IaC-devops-codepipeline-terraform/assets/57904796/fcc164e0-44a2-4cb2-b68f-0866dedc785d)
+
 
 Step-08-01: Create MY_AWS_SECRET_ACCESS_KEY
 Go to Services -> Systems Manager -> Application Management -> Parameter Store -> Create Parameter
