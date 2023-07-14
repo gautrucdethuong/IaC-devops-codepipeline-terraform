@@ -11,6 +11,8 @@ terraform {
       version = "~> 3.0"
     }
   }
+  # Adding Backend as S3 for Remote State Storage
+  backend "s3" { } 
 }
 
 # Provider Block
@@ -18,9 +20,6 @@ provider "aws" {
   region  = var.aws_region
   profile = "default"
 }
-
-  # Adding Backend as S3 for Remote State Storage
-  backend "s3" { } 
 
 # Create Random Pet Resource
 resource "random_pet" "this" {
