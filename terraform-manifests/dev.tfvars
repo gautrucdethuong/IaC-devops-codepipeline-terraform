@@ -16,4 +16,4 @@ vpc_single_nat_gateway                 = true
 instance_type          = "t3.micro"
 instance_keypair       = "terraform"
 private_instance_count = 2
-dns_name               = "devdemo1.devopsincloud.com"
+dns_name               = "devdemo1.travellivingwithme.net"
