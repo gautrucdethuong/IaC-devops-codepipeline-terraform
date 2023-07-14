@@ -3,9 +3,9 @@
 module "private_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "3.18.0"
-  
+
   # name        = "private-sg"
-  name = "${local-name}-private-sg"   // To Support Multiple Environments
+  name = "${local.name}-private-sg"   // To Support Multiple Environments
   description = "Security Group with HTTP & SSH port open for entire VPC Block (IPv4 CIDR), egress ports are all world open"
   vpc_id      = module.vpc.vpc_id
   # Ingress Rules & CIDR Blocks

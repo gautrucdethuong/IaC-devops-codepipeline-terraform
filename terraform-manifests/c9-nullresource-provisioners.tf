@@ -8,7 +8,8 @@ resource "null_resource" "name" {
     host        = aws_eip.bastion_eip.public_ip
     user        = "user-ec2"
     password    = ""
-    private_key = file("private-key/terraform.pem")
+    private_key = file("terraform-mainfests/private-key/terraform.pem")
+    //filebase64("${path.module}/app1-install.sh")
   }
   ## File Provisioner: Copies the terraform-key.pem file to /tmp/terraform-key.pem
   # provisioner "file" {
@@ -22,16 +23,9 @@ resource "null_resource" "name" {
   #   ]
   # }
   ## Local Exec Provisioner:  local-exec provisioner (Creation-Time Provisioner - Triggered during Create Resource)
-  provisioner "local-exec" {
-    command     = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
-    working_dir = "local-exec-output-files"
-  }
   ## Local Exec Provisioner:  local-exec provisioner (Destroy-Time Provisioner - Triggered during deletion of Resource)
 
 }
-
-# Creation Time Provisioners - By default they are created during resource creations (terraform apply)
-# Destory Time Provisioners - Will be executed during "terraform destroy" command (when = destroy)
 
 
 
