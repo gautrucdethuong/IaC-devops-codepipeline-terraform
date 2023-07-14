@@ -1,7 +1,8 @@
 # Autoscaling Notifications
 ## SNS - Topic
 resource "aws_sns_topic" "myasg_sns_topic" {
-  name = "myasg-sns-topic"
+  # name = "myasg-sns-topic"
+  name = "${local.name}-${random_pet.this.id}"
 }
 
 ## SNS - Subscription
