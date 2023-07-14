@@ -6,7 +6,7 @@ module "acm" {
   domain_name = trimsuffix(data.aws_route53_zone.mydomain.name, ".")
   zone_id     = data.aws_route53_zone.mydomain.id
   subject_alternative_names = [
-    var.dns_name 
+    var.dns_name
   ]
   tags = local.common_tags
 }

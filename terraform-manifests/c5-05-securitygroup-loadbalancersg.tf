@@ -5,7 +5,7 @@ module "public_alb_sg" {
   version = "3.18.0"
 
   # name        = "loadbalancer-sg"
-  name = "${local.name}-loadbalancer-sg"   // To Support Multiple Environments
+  name        = "${local.name}-loadbalancer-sg" // To Support Multiple Environments
   description = "Security Group with HTTP open for entire Internet (IPv4 CIDR), egress ports are all world open"
   vpc_id      = module.vpc.vpc_id
   # Ingress Rules & CIDR Blocks

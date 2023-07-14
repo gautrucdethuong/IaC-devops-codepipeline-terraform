@@ -3,7 +3,7 @@
 # Define Autoscaling Policies and Associate them to Autoscaling Group
 resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_xx" {
   # name                      = "avg-cpu-policy-greater-than-xx"
-  name = "${local.name}-avg-cpu-policy-greater-than-xx"
+  name                      = "${local.name}-avg-cpu-policy-greater-than-xx"
   policy_type               = "TargetTrackingScaling" # Important Note: The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."    
   autoscaling_group_name    = module.autoscaling.autoscaling_group_id
   estimated_instance_warmup = 180 # defaults to ASG default cooldown 300 seconds if not set
@@ -20,7 +20,7 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_xx" {
 # TTS - Scaling Policy-2: Based on ALB Target Requests
 resource "aws_autoscaling_policy" "alb_target_requests_greater_than_yy" {
   # name                      = "alb-target-requests-greater-than-yy"
-  name = "${local.name}-alb-target-requests-greater-than-yy"  
+  name                      = "${local.name}-alb-target-requests-greater-than-yy"
   policy_type               = "TargetTrackingScaling" # Important Note: The policy type, either "SimpleScaling", "StepScaling" or "TargetTrackingScaling". If this value isn't provided, AWS will default to "SimpleScaling."    
   autoscaling_group_name    = module.autoscaling.autoscaling_group_id
   estimated_instance_warmup = 120 # defaults to ASG default cooldown 300 seconds if not set  

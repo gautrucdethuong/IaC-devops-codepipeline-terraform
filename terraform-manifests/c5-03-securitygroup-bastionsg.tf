@@ -5,7 +5,7 @@ module "public_bastion_sg" {
   version = "3.18.0"
 
   # name        = "public-bastion-sg"
-  name = "${local.name}-public-bastion-sg" // To Support Multiple Environments
+  name        = "${local.name}-public-bastion-sg" // To Support Multiple Environments
   description = "Security Group with SSH port open for everybody (IPv4 CIDR), egress ports are all world open"
   vpc_id      = module.vpc.vpc_id
   # Ingress Rules & CIDR Blocks

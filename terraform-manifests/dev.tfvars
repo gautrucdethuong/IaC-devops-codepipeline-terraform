@@ -13,7 +13,7 @@ vpc_enable_nat_gateway                 = true
 vpc_single_nat_gateway                 = true
 
 # EC2 Instance Variables
-instance_type = "t3.micro"
-instance_keypair = "terraform"
+instance_type          = "t3.micro"
+instance_keypair       = "terraform"
 private_instance_count = 2
-dns_name = "devdemo1.devopsincloud.com"
+dns_name               = "devdemo1.devopsincloud.com"
